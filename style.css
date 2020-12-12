@@ -151,3 +151,5 @@ nav a:hover {
 #abandonedSector-pt7-normal, #abandonedSector-pt7-specIt {display: none;}
 #abandonedSector-bossfight {display: none;}
 #abandonedSector-items {display: none;}
+
+#gameFinished {display: none}
