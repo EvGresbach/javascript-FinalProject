@@ -143,10 +143,10 @@ nav a:hover {
 #abandonedSector-pt1{
     display: none;
 }
-#abandonedSector-pt2, #abandonedSector-pt2-reveal {display: none;}
+#abandonedSector-pt2 {display: none;}
 #abandonedSector-pt3 {display: none;}
-#abandonedSector-pt4, #abandonedSector-pt4-reveal {display: none;}
-#abandonedSector-pt5, #abandonedSector-pt5-reveal1, #abandonedSector-pt5-reveal2 {display: none;}
+#abandonedSector-pt4{display: none;}
+#abandonedSector-pt5{display: none;}
 #abandonedSector-pt6 {display: none;}
 #abandonedSector-pt7-normal, #abandonedSector-pt7-specIt {display: none;}
 #abandonedSector-bossfight {display: none;}

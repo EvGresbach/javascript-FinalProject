@@ -192,13 +192,6 @@ $(document).ready(function () {
                 enemyCurrentHealth = newbloods[enemyNum].currentHealth;
                 enemyMaxHealth = newbloods[enemyNum].maxHealth;
                 break;
-            case "afterlights":
-                enemyMaxStrength = afterlights[enemyNum].maxStrength;
-                enemyMinStrength = afterlights[enemyNum].minStrength;
-                afterlights[enemyNum].currentHealth -= randomAttack(player.minStrength, player.maxStrength);
-                enemyCurrentHealth = afterlights[enemyNum].currentHealth;
-                enemyMaxHealth = afterlights[enemyNum].maxHealth;
-                break;
         }
         $(`#${enemy}Display`).text(`${enemyCurrentHealth}/${enemyMaxHealth}`);
 
@@ -249,28 +242,17 @@ $(document).ready(function () {
             case "newbloods":
                 if (newbloods[0].currentHealth <= 0 && newbloods[1].currentHealth <= 0 && newbloods[2].currentHealth <= 0 &&
                     newbloods[3].currentHealth <=0){
-                    var imgLW = $("<img>").attr("src", `images/lightning_weapon_${player.class}.png`).attr("class", "itemToPickUp");
-                    var imgLP = $("<img id='health_potion' class='itemToPickUp' src='images/health_potion.png' alt='Health potion'>");
-                    var imgLP2 = $("<img id='health_potion' class='itemToPickUp' src='images/health_potion.png' alt='Health potion'>");
-                    var imgLP3 = $("<img id='health_potion' class='itemToPickUp' src='images/health_potion.png' alt='Health potion'>");
-                    $("#abandonedSector-items").append(imgLP).append(imgLP2).append(imgLP3);
-                    $("lightning_armor").after(imgLW);
+                    $("#abandonedSector-bossfight").toggle();
+                    $("#gameFinished").toggle();
                 }
                 else if (newbloods[0].currentHealth <= 0 && newbloods[1].currentHealth <= 0 && newbloods[2].currentHealth <= 0){
                     var imgN = $("<img id='health_potion' class='itemToPickUp' src='images/health_potion.png' alt='Health potion'>");
                     var imgN2 = $("<img id='health_potion' class='itemToPickUp' src='images/health_potion.png' alt='Health potion'>");
                     var imgN3 = $("<img id='health_potion' class='itemToPickUp' src='images/health_potion.png' alt='Health potion'>");
-                    $("#docks-pt3-fightOver").append(imgN).append(imgN2).append(imgN3);
-                    $("#docks-pt3-fightOver").toggle();
-                    $("#docks-pt3-button").toggle();
+                    $("#abandonedSector-pt4").append(imgN).append(imgN2).append(imgN3);
+                    $("#abandonedSector-pt3").toggle();
+                    $("#abandonedSector-pt4").toggle();
                 }
-                break;
-            case "afterlights":
-                enemyMaxStrength = afterlights[enemyNum].maxStrength;
-                enemyMinStrength = afterlights[enemyNum].minStrength;
-                afterlights[enemyNum].currentHealth -= randomAttack(enemyMinStrength, enemyMaxStrength);
-                enemyCurrentHealth = afterlights[enemyNum].currentHealth;
-                enemyMaxHealth = afterlights[enemyNum].maxHealth;
                 break;
         }
     });
@@ -306,17 +288,8 @@ $(document).ready(function () {
         {area: "docks", class: "Mage", itemName:"Phantom Weapon", itemType:"Weapon", minStrength: 3, maxStrength: 5,
             itemImg: "phantom_weapon_mage", itemDesc: "A staff from Phantom. +3-5 Strength when equipped"},
         {area: "docks", class: "all", itemName:"Book", itemType:"Special Item",
-            itemImg: "book", itemDesc: "A small book with a page marked."},
-
-        {area: "abandonedSector", class: "all", itemName:"Lightning Armor", itemType:"Armor", health: 15,
-            itemImg: "lightning_armor", itemDesc: "Armor dropped by Blue Lightning. +15 Health when equipped"},
-        {area: "abandonedSector", class: "Assassin", itemName:"Lightning Weapon", itemType:"Weapon", minStrength: 6, maxStrength: 8,
-            itemImg: "lightning_weapon_assassin", itemDesc: "A knife dropped by Blue Lightning. +6-8 Strength when equipped"},
-        {area: "abandonedSector", class: "Mage", itemName:"Lightning Weapon", itemType:"Weapon", minStrength: 6, maxStrength: 8,
-            itemImg: "lightning_weapon_mage", itemDesc: "A knife dropped by Blue Lightning. +6-8 Strength when equipped"},
+            itemImg: "book", itemDesc: "A small book with a page marked."}
     ]
-
-    //Checkpoints
 
     //hero object
     var player = {
@@ -423,40 +396,6 @@ $(document).ready(function () {
             maxStrength: 12
         }
     ]
-
-    //final boss
-    var afterlights = [
-        {
-            name: "Nazeera",
-            maxHealth: 100,
-            currentHealth: 100,
-            minStrength: 8,
-            maxStrength: 10
-        },
-        {
-            name: "Kenji",
-            maxHealth: 100,
-            currentHealth: 100,
-            minStrength: 8,
-            maxStrength: 10
-        },
-        {
-            name: "Warner",
-            maxHealth: 100,
-            currentHealth: 100,
-            minStrength: 8,
-            maxStrength: 10
-        },
-        {
-            name: "Corrupi",
-            maxHealth: 150,
-            currentHealth: 150,
-            minStrength: 10,
-            maxStrength: 15
-        }
-    ];
-
-
 
     //intro buttons -- give it the div it's in, the div to open, and the function to toggle them
     $("#intro-pt1-button").click({current: "intro-pt1", next: "intro-pt2"}, openNextArea);
@@ -576,9 +515,9 @@ $(document).ready(function () {
     $("#abandonedSector-pt5-button-blue").click({current: "abandonedSector-pt5", next: "abandonedSector-pt6"}, openNextArea);
     $("#abandonedSector-pt6-button-normal").click({current: "abandonedSector-pt6", next: "abandonedSector-pt7-normal"}, openNextArea)
     $("#abandonedSector-pt6-button-specIt").click({current: "abandonedSector-pt6", next: "abandonedSector-pt7-specIt"}, openNextArea);
-    $("#abandonedSector-pt7-normal-button").click({current: "abandonedSector-pt7-normal", next: "abandonedSector-items"}, openNextArea);
-    $("#abandonedSector-pt7-specIt").click({current: "abandonedSector-pt7-specIt", next: "abandonedSector-items"}, openNextArea);
-    //$("#abandonedSector-items-button").click({current: "abandonedSector", next: \\}, openNextArea);
+    $("#abandonedSector-pt7-normal-button").click({current: "abandonedSector-pt7-normal", next: "gameFinished"}, openNextArea);
+    $("#abandonedSector-pt7-specIt").click({current: "abandonedSector-pt7-specIt", next: "gameFinished"}, openNextArea);
+
 
 
     //functions
