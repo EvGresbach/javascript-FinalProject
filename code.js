@@ -284,9 +284,9 @@ $(document).ready(function () {
         {area: "docks", class: "all", itemName:"Phantom Armor", itemType:"Armor", health: 10,
             itemImg: "phantom_armor", itemDesc: "Armor from Phantom. +10 Health when equipped"},
         {area: "docks", class: "Assassin", itemName:"Phantom Weapon", itemType:"Weapon", minStrength: 3, maxStrength: 5,
-            itemImg: "phantom_weapon_assassin", itemDesc: "A weapon from Phantom. +3-5 Strength when equipped"},
+            itemImg: "phantom_weapon_Assassin", itemDesc: "A weapon from Phantom. +3-5 Strength when equipped"},
         {area: "docks", class: "Mage", itemName:"Phantom Weapon", itemType:"Weapon", minStrength: 3, maxStrength: 5,
-            itemImg: "phantom_weapon_mage", itemDesc: "A staff from Phantom. +3-5 Strength when equipped"},
+            itemImg: "phantom_weapon_Mage", itemDesc: "A staff from Phantom. +3-5 Strength when equipped"},
         {area: "docks", class: "all", itemName:"Book", itemType:"Special Item",
             itemImg: "book", itemDesc: "A small book with a page marked."}
     ]
