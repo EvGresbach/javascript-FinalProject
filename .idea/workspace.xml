@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="183e1cac-449e-4eb4-8483-2870538f0f7a" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="jQuery JS" />
+        <option value="Bootstrap HTML" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1l1J3uuKBIdtZEU39gcFSgnywX1" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\evxin\OneDrive\Desktop\WCTC\Fall 2020\2_JavaScript\Unit3\FinalProject" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="183e1cac-449e-4eb4-8483-2870538f0f7a" name="Default Changelist" comment="" />
+      <created>1606758467424</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606758467424</updated>
+      <workItem from="1606758468472" duration="617000" />
+      <workItem from="1606869400127" duration="4610000" />
+      <workItem from="1606935267071" duration="723000" />
+      <workItem from="1606943220555" duration="3162000" />
+      <workItem from="1607023339521" duration="4223000" />
+      <workItem from="1607037048936" duration="4373000" />
+      <workItem from="1607059748165" duration="2613000" />
+      <workItem from="1607120123382" duration="6718000" />
+      <workItem from="1607313101920" duration="33000" />
+      <workItem from="1607356337936" duration="16973000" />
+      <workItem from="1607385584947" duration="8926000" />
+      <workItem from="1607476745751" duration="5299000" />
+      <workItem from="1607532465810" duration="10969000" />
+      <workItem from="1607543454018" duration="12239000" />
+      <workItem from="1607619949197" duration="3000" />
+      <workItem from="1607699177153" duration="35166000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="165" y="170" key="FileChooserDialogImpl" timestamp="1607053195697">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="165" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1607053195697" />
+    <state x="-6" y="0" width="779" height="830" key="dock-window-1" timestamp="1607749862014">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="-6" y="0" width="779" height="830" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1607749862014" />
+    <state x="432" y="144" width="672" height="678" key="search.everywhere.popup" timestamp="1607748651285">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="432" y="144" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1607748651285" />
+  </component>
+</project>

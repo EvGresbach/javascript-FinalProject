@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>The Rebellion</title>
+</head>
+<body>
+    <header>
+        <h1>The Rebellion</h1>
+    </header>
+    <nav>
+        <a href="index.html" target="_blank">Home</a>
+        <a href="playPage.html">Play</a>
+        <a href="about.html" target="_blank">About</a>
+    </nav>
+
+    <div id="left">
+        <h2>Stats</h2>
+        <p>Name: <span class="playerNameDisplay"></span></p>
+        <p>Class: <span id="playerClassDisplay"></span></p>
+        <p>Weapon: <span id="currentWeapon"></span></p>
+        <div id="currentWeaponDiv"></div>
+        <p>Armor: <span id="currentArmor"></span></p>
+        <div id="currentArmorDiv"></div>
+        <p><b>Health: </b><span id="playerHealthDisplay"></span></p>
+        <p><b>Strength: </b><span id="playerStrengthDisplay"></span></p>
+
+        <img id="backpackImg" src="images/backpack_resized.png" height="75" width="75" alt="Pixel backpack">
+        <p id="backpackContents"></p>
+    </div>
+    <div id="right">
+        <h2>Game Messages</h2>
+        <div id="gameMessages">
+
+        </div>
+    </div>
+    <div id="center">
+        <div id="ready">
+            <h2>Ready to play?</h2>
+            <button id="startGameButton">Start Game</button>
+        </div>
+
+        <!--Intro -->
+        <div id="intro">
+            <div id="intro-name">
+                <p>Hello there, adventurer! Please tell me your name</p>
+                <form id="submitName">
+                    <label for="playerName">Name: </label>
+                    <input type="text" id="playerName" name="playerName">
+                    <button>That's Me!</button>
+                </form>
+            </div>
+            <div id="intro-pt1">
+                <p>Very nice to meet you. My name is Maven and I will be your direc-I mean your guide. I am here to help you on
+                    your way to defeat Little Lightning. Oh? Who is Little Lightning? I thought you knew. She is the leader of a large rebel force.
+                    She and her group started long ago when King Thurmond rose to power. Since then, they have been attacking small
+                    but important towns, killing everyone in their path. They say that she has unimaginable abilities.
+                    Rumor has it, she can control electricity and even create storms. Isn't that just terrifying and AWESOME.
+                    I've also heard that when they first started, they broke into a prison and all the escaped convicts joined
+                    her. That's apparently how they started. But that's only a rumor. No one is exactly sure how they accumulated
+                    the power they have today. Hey do you think I could start a rebellion? I mean, you'd follow me right, adventurer?
+                    Imagine that. Me. A leader. What a glorious site I'd be.
+                </p>
+                <button id="intro-pt1-button">Excuse me. You were talking about Little Lightning?</button>
+            </div>
+            <div id="intro-pt2">
+                <p>Oh, yes, sorry sorry. Where was I? Oh yes! Your job is to kill her. This will be no easy task, adventurer.
+                    Before we do that, we have to find Phantom. She's a trained assassin and the only one who knows where Little Lightning is.
+                    Alright sold- adventurer. Are you ready?
+                </p>
+                <button id="intro-pt2-yes">Yes</button> <button id="intro-pt2-weirdo">Why are you acting weird?</button>
+            </div>
+            <div id="intro-weirdo-pt1">
+                <p>What? I'm not acting weird. I don't know what you mean sold-ADVENTURER. I'm not being weird.</p>
+                <button id="intro-weirdo-pt1-youAre">Yes you are.</button> <button id="intro-weirdo-pt1-whatever">Ok, whatever</button>
+            </div>
+            <div id="intro-weirdo-pt2">
+                <p>You are mean, adventurer. You know that? This is very rude of you. We are wasting time, adventurer.
+                    Can we please just go?
+                </p>
+                <button id="intro-weirdo-pt2-yes">Yes, let's go</button> <button id="intro-weirdo-pt2-no">No. Why are you being weird?</button>
+            </div>
+            <div id="intro-weirdo-SpecItem">
+                <p>Ok fine. To be honest, adventurer, this is my first time being a guide. If you haven’t noticed, I keep slipping
+                    up. Please don’t tell my boss. We are supposed to make this feel like a real adventure, not a game. Here, to
+                    make up for all of my past or future mistakes, take this bag. Click on it to add it to your backpack.
+                </p>
+                <img id="diamond_necklace" class="itemToPickUp" src="images/diamond_necklace.png" alt="Diamond necklace">
+                <p> Can we go now?</p>
+                <button id="intro-weirdo-SpecItem-button">Yes</button>
+            </div>
+            <div id="intro-pt3">
+                <p>Perfect! Lets go! Oh wait, one more thing. You will need weapons but I need to know what kind to give you.
+                    Tell me, adventurer, what is your class? (Hover over the options to get more information)</p>
+                <input type="radio" name="playerClass" id="assassin" value="Assassin" checked="checked">
+                <label for="assassin">Assassin</label>
+                <input type="radio" name="playerClass" id="mage" value="Mage">
+                <label for="mage">Mage</label>
+                <div id="intro-pt3-classInfo">
+                    <p>Class: <span id="classInfo-className"></span></p>
+                    <p id="classInfo-description"></p>
+
+                </div>
+                <br>
+                <button>That's my class</button>
+            </div>
+            <div id="intro-pt4">
+                <p>Here, adventurer. This is a piece of armor and a weapon. Click on each one to place it in your backpack.
+                    Now, you will have to equip your armor and weapons. You can click on your backpack to open it up and
+                    see what you have. Then, click on what you want to equip and it will appear under your armor or weapon
+                    area. Let me know when you are done, adventurer.
+                </p>
+                <img id="basic_armor" class="itemToPickUp armor" src="images/basic_armor.png" alt="Basic Armor">
+                <button id="intro-pt4-button">I'm done.</button>
+            </div>
+            <div id="intro-pt5">
+                <p>Perfect! Now, do you see those right there? We will use those as training dummies. You fight by clicking
+                    whoever you wish. Go ahead and try it. </p>
+                <img id="bushes1" class="enemy" src="images/bush.png" alt="Enemy 1: Bush">
+                <p>Name: Bush <br> Health: <span id="bushes1Display">5/5</span></p>
+                <img id="bushes2" class="enemy" src="images/bush.png" alt="Enemy 2: Bush">
+                <p>Name: Bush <br> Health: <span id="bushes2Display">5/5</span></p>
+                <button id="intro-pt5-button">That was easy.</button>
+            </div>
+            <div id="intro-pt6">
+                <p>Hey look, the bushes dropped something. It looks like a health potion. Go ahead and put it in your backpack
+                    if you want. You can use it at any time. All you have to do is click on it and it will heal 10% of your health.
+                    Remember to pick up all health potions before moving on because you can't go back to pick them up.
+                </p>
+                <img id="health_potion" class="itemToPickUp" src="images/health_potion.png" alt="Health potion">
+                <button id="intro-pt6-button">I'm all set!</button>
+            </div>
+            <div id="intro-pt7">
+                <p>There is one last type of item you can have and those are called Special Items. You can use them to talk
+                    to the commanders and they may let you pass without fighting them. You must be careful with the commanders,
+                    adventurer. If you say the wrong thing, you may offend them and they become harder to defeat.<br>
+                    Are you ready? </p>
+                <button id="intro-pt7-button">Hell yes!</button>
+            </div>
+        </div>
+
+        <!-- Phantom -->
+        <div id="docks">
+            <div id="docks-pt1">
+                <p> The first place we have to go to is the docks of a city called Sullania . That’s where Phantom is located.
+                    She’s runs a notorious gang known as the Royal Spirits. She often spends time out at sea, hunting down
+                    ships. I'm not sure why, adventurer. I only know that her ship, The Wraith, is often the last one many
+                    sailor see. I'm still trying to figure out how her activities are related to Little Lightning's.
+                    I have some theories on this if you’d like to hear them. No? Oh… Well….
+                    <br>
+
+                    Anyways, Phantom is protected by a gang. Chances are, she'll be with her most trusted members: Shadow,
+                    Vision, and Shade. I'm sure you can handle them, but you should try to avoid making a scene, adventurer.
+                    Are you ready for this?
+                </p>
+                <button id="docks-pt1-button">Yes</button>
+            </div>
+            <div id="docks-pt2">
+                <p>Do you see those hooded figures out there? Those are Shadow, Vision, and Shade. That means Phantom should
+                    be around here somewhere. You should try sneaking past them. Take that alley. Go on. Quickly!
+                </p>
+                <p>Oh no, adventurer. I didn't realize that this was a dead end. And look behind you! It's the Royal Spirits.
+                    What are you going to do now?</p>
+                <button id="docks-pt2-button">Fight</button>
+            </div>
+            <div id="docks-pt3">
+                <img id="royalSpirits1" class="enemy" src="images/royalSpirits.png" alt="Royal Spirit 1: Shadow">
+                <p>Name: Shadow <br> Health: <span id="royalSpirits1Display">10/10</span></p>
+                <img id="royalSpirits2" class="enemy" src="images/royalSpirits.png" alt="Royal Spirit 2: Vision">
+                <p>Name: Vision <br> Health: <span id="royalSpirits2Display">10/10</span></p>
+                <img id="royalSpirits3" class="enemy" src="images/royalSpirits.png" alt="Royal Spirit 3: Shade">
+                <p>Name: Shade <br> Health: <span id="royalSpirits3Display">10/10</span></p>
+                <p id="docks-pt3-fightOver">Look! They're starting to back away. Great job, adventurer.
+                    <br>
+
+                </p>
+                <br>
+                <button id="docks-pt3-button">Thanks</button>
+            </div>
+            <div id="docks-pt4">
+                <p>I knew you could do it! Oh wait. Who's that behind them?</p>
+                <p>Why, hello there. And what is your name? <span class="playerNameDisplay"></span>? And what brings you here,
+                    <span class="playerNameDisplay"></span>? Based on this this...<i>disagreement</i>, I would say that you've
+                    come to see me. Am I wrong?
+                </p>
+                <p id="docks-useSpecItem">Adventurer, tell her about the necklace that I gave you.</p>
+                <button id="docks-pt4-button-normal">No.</button> <button id="docks-pt4-button-specItem">I have something for you.</button>
+            </div>
+            <div id="docks-pt5">
+                <p>The necklace. How did you get your hands on this? I've been trying to find her since she went into
+                    hiding so long ago. She was running from me. Tell me, is she still alive?
+                </p>
+                <button id="docks-pt5-button-yes">Yes.</button>
+                <button id="docks-pt5-button-no">No.</button>
+                <button id="docks-pt5-button-idk">I'm not sure.</button>
+            </div>
+            <div id="docks-pt6">
+                <p id="docks-pt6-yes">Yes? You must tell me where she is hiding. You must remember, <span class="playerNameDisplay"></span>,
+                    that you are in my city. That means you must play by <i>my</i> rules. You don't want to tell me? Fine.
+                    Have it your way. I hope you knives are sharper than your wits.
+                    <button id="docks-pt6-button-fight">Trust me, they are.</button>
+                </p>
+                <p id="docks-pt6-no">No? She's not dead? How did you get this? The Peacock would rather die than a stranger her this. That means,
+                    <span class="playerNameDisplay"></span>, you are working with her. No? Don't take me for a fool. I may
+                    be young, but I'm far more deadly than all the people in this city combined. Where is the Peacock?
+                    You really wont tell me? I hope you knives are sharper than your wits.
+                    <button id="docks-pt6-button-fight2">Trust me, they are.</button>
+                </p>
+                <p id="docks-pt6-idk">You're not sure? How can you not know the fate of the Peacock if you have one of her prized possessions?
+                    Ah, I see. You traded for it. How about this. I'll give you a piece of information that you need if you'll
+                    give me the name of the person who traded this item with you. What do you say?
+                    <br>
+                    <button id="docks-pt6-button-tell">Maven Anderson.</button>
+                    <button id="docks-pt6-button-dontTell">I didn't catch their name.</button>
+                </p>
+            </div>
+            <div id="docks-pt7">
+                <p id="docks-pt7-tell">Maven Anderson. Thank you for your honesty. Blue Lightning is in the abandoned sector.
+                    Show her this when you get there. I don't know what business you have with Blue Lightning, but keep in mind that
+                    things aren't always as they appear. I joined her for the same reason everyone else did; to change the world
+                    for the better. To, hopefully, make it better. As a friend of mine once said, "When the world owed you
+                    nothing, you demanded something of it anyway." Oh, one last thing,<span class="playerNameDisplay"></span>.
+                    Give this to Blue Lightning.
+                    <img id="book" class="itemToPickUp" src="images/book.png" alt="Small brown book">
+                    <button id="docks-pt7-tell-button">Thank you.</button>
+                </p>
+                <p id="docks-pt7-dontTell">I see. Girls, lets go. <span class="playerNameDisplay"></span>. I am well aware that you know their
+                    but won't tell me. However, I am feeling merciful today. Go to the abandoned sector to find Blue Lightning.
+                    Now, get out of my city. If I catch you here again, things won't end so well.
+                    <button id="docks-pt7-dontTell-button">Thank you.</button>
+                </p>
+            </div>
+            <div id="docks-bossfight">
+                <img id="royalSpirits4" class="enemy" src="images/royalSpirit_boss.png" alt="Enemy Boss: Phantom">
+                <p>Name: Phantom <br> Health: <span id="royalSpirits4Display">20/20</span></p>
+            </div>
+            <div id="docks-items">
+                <p>
+                    Why have you come to see me? Little Lightning? You're a fool if you think you can kill her. All I
+                    know is that she's currently somewhere in the woods. Blue Lightning will know more. Why don't you pay
+                    her a visit. You won't stand a chance against her.
+                </p>
+                <img id="phantom_armor" class="itemToPickUp" src="images/phantom_armor.png" alt="Purple and gold armor">
+                <button id="docks-items-button">You're wrong about that.</button>
+            </div>
+        </div>
+
+        <!--Blue Lightning -->
+        <div id="abandonedSector">
+            <div id="abandonedSector-pt1">
+                <p>
+                    Well, adventurer, it's time to take on Little Lightning.  Phantom said that she lives in that old abandoned
+                    sector. I'm not sure why people still call it abandoned. There are still residents there. Anyways,
+                    we need to find her. She should be at the old capital building. She's always guarded by her Newbloods.
+                    They're similar to the Elite Guard that protects King Thurmond. I don't know much more about them.
+                    Are you ready, adventurer?
+                </p>
+                <button id="abandonedSector-pt1-button">Yes</button>
+            </div>
+            <div id="abandonedSector-pt2">
+                <p>Ok, adventurer. Up ahead at the gate are three people. Those are members of the Newbloods. I think the
+                    best thing here is to go over and talk to them. Trust me. It's not like we could sneak in even if we
+                    wanted to. Just go, adventurer. Tell them that you wish to speak to Little Lightning.
+                </p>
+                <p id="abandonedSector-pt2-reveal">
+                    Uh, oh. They seem suspicious of you. Maybe you could tell them that you have important information for
+                    her? That didn't seem to work either. Maybe you could- Mhm. I see, adventurer. You don't trust my advice.
+                    Well what is your brilliant plan? <br>
+                    <button id="abandonedSector-pt2-button">Fight</button>
+                </p>
+
+            </div>
+            <div id="abandonedSector-pt3">
+                <img id="newbloods1" class="enemy" src="images/royalSpirits.png" alt="Newblood 1: Shadow">
+                <p>Name: Z <br> Health: <span id="newbloods1Display">10/10</span></p>
+                <img id="newbloods2" class="enemy" src="images/royalSpirits.png" alt="Newblood 2: Vision">
+                <p>Name: Viper <br> Health: <span id="newbloods2Display">10/10</span></p>
+                <img id="newbloods3" class="enemy" src="images/royalSpirits.png" alt="Newblood 3: Shade">
+                <p>Name: Electra <br> Health: <span id="newbloods3Display">10/10</span></p>
+            </div>
+            <div id="abandonedSector-pt4">
+                <p>Ok, fine. Your plan worked. Congratulations. </p>
+                <p>Put your hands up before I fry you. Who are you.</p>
+                <p id="abandonedSector-pt4-reveal">What do you want? Answer me! Little Lightning? I'm her. What, did King
+                    Thermond send you to do his dirty work? Hmm? He's always sending poor souls too brave or stupid to
+                    refuse his challenge. You're not going to win this.<br>
+                    <button id="abandonedSector-pt4-button-danger">You're wrong. I'll prove it.</button>
+                    <button id="abandonedSector-pt4-button-safe">King Thurmond didn't send me.</button>
+                </p>
+              </div>
+            <div id="abandonedSector-pt5">
+                <p>
+                    Ha! Of course he did. Who else would have sent you? Maybe he himself didn't send you, but of his directors
+                    surely did. Do you know about them? He started his fight against me with armies. When those failed
+                    he sent mercenaries. Now he has his directors find the poor souls.
+                    You must have been sent by one of his directors. Who's that new one? Maven?
+                </p>
+                <p id="abandonedSector-pt5-reveal1">Don't listen to her, adventurer. Trust me. Little Lightning is lying to you.</p>
+                <p id="abandonedSector-pt5-reveal2">
+                    I've heard that the last kid he sent didn't even make it into Sullania. Did he even tell you my name?
+                    <br>
+                    <button id="abandonedSector-pt5-button-little">Little Lightning</button>
+                    <button id="abandonedSector-pt5-button-blue">Blue Lightning</button>
+                </p>
+            </div>
+            <div id="abandonedSector-pt6">
+                <p>
+                    Interesting. You know, countless people have died trying to
+                    kill me because the king says I'm evil. Corrupt. I'm not you know. It was the king's armies
+                    that razed town and killed families looking for me. I'm sure that Maven told you that we killed
+                    everyone in our way. That all the people who follow her are escaped murderers? It's not true. Don't believe
+                    him. I know he wasn't the one to tell you my name. Who did? <br>
+                    <button id="abandonedSector-pt6-button-normal">Phantom</button>
+                    <button id="abandonedSector-pt6-button-specIt">Phantom. She gave me this.</button>
+                </p>
+            </div>
+            <div id="abandonedSector-pt7-normal">
+                <p>Did she? I have no quarrel with you. I want you to go. Leave and never come back. I'm sure you're strong
+                    enough to defeat me - or at least you think you are - but my fight isn't with you.
+                </p>
+                <button id="abandonedSector-pt7-normal-button">Thanks</button>
+            </div>
+            <div id="abandonedSector-pt7-specIt">
+                <p>
+                    The book! I've been waiting for this. I'm assuming you've read some of it? No? Well, that doesn't
+                    matter now. Thank you, <span class="playerNameDisplay"></span>. I have no quarrel with you. I want you to go. Leave and never come back. I'm sure you're strong
+                    enough to defeat me - or at least you think you are - but my fight isn't with you.
+                </p>
+                 <button>Thanks</button>
+            </div>
+            <div id="abandonedSector-bossfight">
+                <img id="newbloods4" class="enemy" src="images/newbloods_boss.png" alt="Enemy Boss: Little Lightning">
+            </div>
+            <div id="abandonedSector-items">
+                <img id="lightning_armor" class="itemToPickUp" src="images/lightning_armor.png" alt="Blue and gold armor">
+                <button id="abandonedSector-items-button"></button>
+            </div>
+        </div>
+        <div id="gameFinished">
+            <h3>Game Over</h3>
+            <p>You have finished the game! Thank you for playing!</p>
+        </div>
+        <div id="gameOver">
+            <h3>Game Over</h3>
+            <p>You died.</p>
+        </div>
+    </div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+<script src="code.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+/* color codes
+Page colorscheme
+Intro
+-- black: #000000
+-- redish: #783030
+-- grey: #a8a8a8
+-- light grey: #d8d8d8
+-- basically white: #f0f0f0
+Docks
+-- dark purple: #502989
+-- purple: #9570dd
+-- light purple: #f0eafa
+Abandoned Sector
+-- Dark: #096484
+-- medium: 4796b3
+-- light 74b6ce
+BombedCity
+-- dark red: #560410
+-- bright?? orange: ff4417
+-- orange: ff6e00
+-- yellow-ish: ffa600
+ */
+
+header {
+    margin-bottom: 0;
+}
+header h1 {
+    text-align: center;
+    background-color: #783030;
+    color: white;
+    margin-bottom: 0;
+}
+nav {
+    text-align: center;
+    background-color: #a8a8a8;
+    margin-top: 0;
+}
+nav a {
+    color: black;
+}
+nav a:hover {
+    color: #783030;
+}
+#left {
+    float: left;
+    height: 100%;
+    width: 20%;
+    background-color: #d8d8d8;
+    margin-right: 10px;
+}
+#backpackContents {
+    display: none;
+}
+
+#right {
+    float: right;
+    height: 100%;
+    width: 20%;
+    background-color: #d8d8d8;
+    margin-left: 10px;
+}
+#gameOver {
+    display: none;
+}
+#intro-name {
+    display: none;
+}
+#intro-pt1 {
+    display: none;
+}
+#intro-pt2 {
+    display: none;
+}
+#intro-weirdo-pt1 {
+    display: none;
+}
+#intro-weirdo-pt2 {
+    display: none;
+}
+#intro-weirdo-SpecItem {
+    display: none;
+}
+#intro-pt3 {
+    display: none;
+}
+#intro-pt3-classInfo {
+    display: none;
+}
+#intro-pt4 {
+    display: none;
+}
+#intro-pt4-button{
+    display: none;
+}
+#intro-pt5 {
+   display: none;
+}
+#intro-pt5-button {
+    display: none;
+}
+#intro-pt6 {
+    display: none;
+}
+#intro-pt7 {
+    display: none;
+}
+
+#docks-pt1 {
+    display: none;
+}
+#docks-pt2 {
+    display: none;
+}
+#docks-pt3 {
+    display: none;
+}
+#docks-pt3-button{
+    display: none;
+}
+#docks-pt3-fightOver {
+    display: none;
+}
+#docks-pt4 {
+    display: none;
+}
+#docks-pt4-button-specItem, #docks-useSpecItem {
+    display: none;
+}
+#docks-pt5 {
+    display: none;
+}
+#docks-pt6-yes, #docks-pt6-no, #docks-pt6-idk {
+    display: none;
+}
+#docks-pt7-tell, #docks-pt7-dontTell {
+    display: none;
+}
+#docks-bossfight {
+    display: none;
+}
+#docks-items {display: none;}
+
+#abandonedSector-pt1{
+    display: none;
+}
+#abandonedSector-pt2, #abandonedSector-pt2-reveal {display: none;}
+#abandonedSector-pt3 {display: none;}
+#abandonedSector-pt4, #abandonedSector-pt4-reveal {display: none;}
+#abandonedSector-pt5, #abandonedSector-pt5-reveal1, #abandonedSector-pt5-reveal2 {display: none;}
+#abandonedSector-pt6 {display: none;}
+#abandonedSector-pt7-normal, #abandonedSector-pt7-specIt {display: none;}
+#abandonedSector-bossfight {display: none;}
+#abandonedSector-items {display: none;}
